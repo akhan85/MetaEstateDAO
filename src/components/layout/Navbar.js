@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Link from 'next/link';
 import { Dialog } from '@headlessui/react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -16,7 +17,7 @@ export default function Navbar() {
     <header className="fixed w-full top-0 z-50 bg-white/80 backdrop-blur-md">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
-        <a href="/" className="-m-1.5 p-1.5" onClick={(e) => {
+        <Link href="/" className="-m-1.5 p-1.5" onClick={(e) => {
   e.preventDefault();
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }}>
@@ -25,7 +26,7 @@ export default function Navbar() {
             <div className="text-2xl font-bold text-primary">
               MetaEstateDAO
             </div>
-          </a>
+          </Link>
         </div>
         
         {/* Mobile menu button */}
@@ -90,7 +91,7 @@ export default function Navbar() {
           >
             <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
               <div className="flex items-center justify-between">
-              <a href="/" className="-m-1.5 p-1.5" onClick={(e) => {
+              <Link href="/" className="-m-1.5 p-1.5" onClick={(e) => {
                 e.preventDefault();
                 window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}>
@@ -99,7 +100,7 @@ export default function Navbar() {
                   <div className="text-2xl font-bold text-primary">
                     MetaEstateDAO
                   </div>
-                </a>
+                </Link>
                 <button
                   type="button"
                   className="-m-2.5 rounded-md p-2.5 text-gray-700"
